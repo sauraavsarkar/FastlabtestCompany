@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Employee";
+}
+
+<h1 style="text-align:center;">Our Company's Employee</h1><hr>
+
+<header>
+    <div>
+        <a href="/Company/Index">Home &ensp; </a>
+        <a href="/Company/Featuresplan"> Features plan &ensp; </a>
+        <a href=""> Employee &ensp; </a>
+        <a href="/Company/About"> About &ensp; </a>
+        <a href="/Company/contact"> contact &ensp;  </a>
+        <a href="/Company/Signin"> Sign in &ensp; </a>
+        <a href="/Company/Signup"> Sign up  &ensp; </a>
+    </div> <hr>
+</header>
+ 
+<body>
+    <h2>Employee's</h2>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+               Employee Name: @item.Name
+                <ul>
+                    Joining date :@item.Year <br>
+                    Employee UID :@item.Uid <br>
+                </ul>
+            </li>
+            <br>
+        }
+    </ul>
+
+
+</body>
+
+
